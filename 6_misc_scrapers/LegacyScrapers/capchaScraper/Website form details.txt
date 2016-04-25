@@ -1,0 +1,33 @@
+http://indianvisa-bangladesh.nic.in/visa/
+
+Click on "Get Appointment"
+
+
+1. First input file no, passport no and captcha then click on "Generate OTP"
+
+(OTP is a temporary password to login in on the next step.)
+
+2. Then: input same file no, passport, OTP and captcha and click on "Submit"
+
+3. Then follow the next steps...
+
+
+OTP: 
+
+1. OTP is valid for 5 minutes.
+2. Maximum 3 OTPs can be generated on a given day for a Filenumber.
+
+
+
+
+I am including 2 file sets:
+
+Application/file no - BGDDY1150E15
+birthday            - 08/06/1969
+Passport no         - BA0738510
+
+BGDDY01D8F15
+08/06/1969
+BA0738510
+
+Mission - Dhaka-Bangladesh

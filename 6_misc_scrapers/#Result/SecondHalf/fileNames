@@ -1,0 +1,80 @@
+0
+name1Start = '66600-67000.csv'
+myInterval = 400
+thread1start = 66600
+1
+name1Start = '51700-52500.csv'
+myInterval = 800
+thread1start = 51700
+2
+name1Start = '54200-55000.csv'
+myInterval = 800
+thread1start = 54200
+3
+name1Start = '61600-62500.csv'
+myInterval = 900
+thread1start = 61600
+4
+name1Start = '64100-65000.csv'
+myInterval = 900
+thread1start = 64100
+5
+name1Start = '3900-5000.csv'
+myInterval = 1100
+thread1start = 3900
+6
+name1Start = '56400-57500.csv'
+myInterval = 1100
+thread1start = 56400
+7
+name1Start = '58900-60000.csv'
+myInterval = 1100
+thread1start = 58900
+8
+name1Start = '28750-30000.csv'
+myInterval = 1250
+thread1start = 28750
+9
+name1Start = '68600-70000.csv'
+myInterval = 1400
+thread1start = 68600
+10
+name1Start = '18400-20000.csv'
+myInterval = 1600
+thread1start = 18400
+11
+name1Start = '23400-25000.csv'
+myInterval = 1600
+thread1start = 23400
+12
+name1Start = '8300-10000.csv'
+myInterval = 1700
+thread1start = 8300
+13
+name1Start = '13300-15000.csv'
+myInterval = 1700
+thread1start = 13300
+14
+name1Start = '31500-35000.csv'
+myInterval = 3500
+thread1start = 31500
+15
+name1Start = '36500-40000.csv'
+myInterval = 3500
+thread1start = 36500
+16
+name1Start = '41500-45000.csv'
+myInterval = 3500
+thread1start = 41500
+17
+name1Start = '46500-50000.csv'
+myInterval = 3500
+thread1start = 46500
+18
+name1Start = '71300-80000.csv'
+myInterval = 8700
+thread1start = 71300
+19
+name1Start = '81300-90000.csv'
+myInterval = 8700
+thread1start = 81300
