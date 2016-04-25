@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.suntrust.com/" />
+<title>1suntrust</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">1suntrust</td></tr>
+</thead><tbody>
+<!--Set Up Folders, Link selectors, Array-->
+<tr>
+	<td>store</td>
+	<td>/data/temp</td>
+	<td>screenshots_folder</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['church_links'] =[];&nbsp;&nbsp;&nbsp;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['my_results'] =[];&nbsp;&nbsp;&nbsp;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['church_selector'] =&nbsp;&nbsp;'a.suntrust-branch-name'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>['AL','AR','FL','GA','MA','MI','NC','SC','TN','VA','WV','DC']</td>
+	<td>my_states</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>state_index</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>12</td>
+	<td>number_of_states</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['state_array'] =&nbsp;&nbsp;${my_states}</td>
+	<td></td>
+</tr>
+<!--Select State-->
+<tr>
+	<td>while</td>
+	<td>${state_index} &lt; ${number_of_states}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['label_state']=storedVars.state_array[storedVars.state_index]</td>
+	<td>my_current_state</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${my_current_state}</td>
+	<td></td>
+</tr>
+<!--Regions-->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<!--Open Page-->
+<tr>
+	<td>open</td>
+	<td>https://www.suntrust.com/FindUs?storesearch=${my_current_state}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>window.document.getElementById('distance-filter')[0].value = 3000;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//html/body/div[2]/div/div[2]/div[3]/section[2]/div/div/div/section/div[1]/section/div[1]/div[1]/form/fieldset/div[3]/div/span/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//html/body/div[2]/div/div[2]/div[3]/section[2]/div/div/div/section/div[1]/section/div[1]/div[1]/form/fieldset/div[1]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--# Store Links Preliminary a#-->
+<tr>
+	<td>storeEval</td>
+	<td>var links = window.document.querySelectorAll(storedVars['church_selector']);for(var i =0; i &lt; links.length; i++) {storedVars['church_links'].push(links[i].href);}</td>
+	<td></td>
+</tr>
+<!--# Store Links Preliminary b#-->
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//input[103]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var links = window.document.querySelectorAll(storedVars['church_selector']);for(var i =0; i &lt; links.length; i++) {storedVars['church_links'].push(links[i].href);}</td>
+	<td></td>
+</tr>
+<!--# Store Links #-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${x} &lt; 102</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//input[104]</td>
+	<td>more_states_present</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>!${more_states_present}</td>
+	<td>skiper</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//input[104]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var links = window.document.querySelectorAll(storedVars['church_selector']);for(var i =0; i &lt; links.length; i++) {storedVars['church_links'].push(links[i].href);}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>skiper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.state_index++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<!--#Opening Links #-->
+<tr>
+	<td>echo</td>
+	<td>${church_links}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var i, len=storedVars['church_links'].length, out=[], obj={};&nbsp;&nbsp;&nbsp;&nbsp;for (i=0;i&lt;len;i++) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj[storedVars['church_links'][i]]=0;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;for (i in obj) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.push(i);&nbsp;&nbsp;&nbsp;} storedVars['my_results'] = out;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${my_results}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['profileLinksIndex'] = 0;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['profileLinksSize'] = storedVars['my_results'].length;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${profileLinksIndex} &lt; ${profileLinksSize}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['profileLink'] = storedVars['my_results'][storedVars['profileLinksIndex']]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>${profileLink}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['rname'] = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;.split(&quot;&quot;).filter(function(e, i, a) { return Math.random() &gt; 0.8 }).join(&quot;&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td>${screenshots_folder}/${rname}.png</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['profileLinksIndex'] = storedVars['profileLinksIndex'] + 1;	</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--#########-->
+</tbody></table>
+</body>
+</html>

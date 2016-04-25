@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.footsolutions.com/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>/data/temp</td>
+	<td>screenshots_folder</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>['tx','AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY','DC']</td>
+	<td>my_states</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>state_index</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>52</td>
+	<td>number_of_states</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['state_array'] =&nbsp;&nbsp;${my_states}</td>
+	<td></td>
+</tr>
+<!--Select State-->
+<tr>
+	<td>while</td>
+	<td>${state_index} &lt; ${number_of_states}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['label_state']=storedVars.state_array[storedVars.state_index]</td>
+	<td>my_current_state</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${my_current_state}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://footsolutions.com/store-locator/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>window.navigator.geolocation.getCurrentPosition = function(success){ var position = { &quot;coords&quot; : {&quot;latitude&quot;: &quot;555&quot;,&quot;longitude&quot;: &quot;999&quot;} };&nbsp;&nbsp;success(position); }</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=addressInput</td>
+	<td>${my_current_state}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=radiusSelect</td>
+	<td>label=500 miles</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=addressSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.state_index++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
