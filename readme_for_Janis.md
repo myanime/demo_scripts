@@ -1,4 +1,5 @@
-Scrapes HD images from google.com
+1. Scrapes HD images from google.com
+___
 This is a pretty simple scraper, but it demonstrates combined use
 of scrapy with selenium.
 
@@ -13,4 +14,5 @@ https://www.youtube.com/watch?v=cVXg5elLmu0
 
 To Run:
 scrapy crawl my-house-spider
+___
 
