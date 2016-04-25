@@ -26,4 +26,4 @@ ___
 ___
 6_misc_scrapers - google.com scraper - very unorganised
 ___
-7_hh_autoworker - nicely commented script that applies for jobs automatically on hh.ru
+7_hh_autoworker - nicely commented script that applies for jobs automatically on hh.ru, it logs in to the site
