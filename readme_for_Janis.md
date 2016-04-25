@@ -1,3 +1,4 @@
+Some Demo scripts
 1_scrapy_selenium_scraper_clean:
 ___
 Scrapes HD images from google.com
@@ -16,8 +17,13 @@ scrapy crawl my-house-spider
 ___
 
 2_realtor_ca_script - pure scrapy script that scrapes a real estate site
+___
 3_selenese_scripts - this is an example of some of the scripts with which I make most of my money. Some javascript is involved, but it is I admit pretty basic
+___
 4_kijiji - Another scrapy real estate scraper 
+___
 5_craigs_list_scraper - This script is actually kind of interesting, it uses a proxy. It "flags" craigslist entries (blocks them basically)
+___
 6_misc_scrapers - google.com scraper - very unorganised
+___
 7_hh_autoworker - nicely commented script that applies for jobs automatically on hh.ru
