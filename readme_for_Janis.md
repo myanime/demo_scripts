@@ -3,7 +3,7 @@ Some Demo scripts
 ___
 Scrapes HD images from google.com
 This is a pretty simple scraper, but it demonstrates combined use
-of scrapy with selenium, that and I cleaned it up a bit an wrote some comments.
+of scrapy with selenium, that, and I cleaned it up a bit an wrote some comments.
 
 If you couldn't be bothered running it I have a youtube video which
 demonstrates it. Its not that fancy, but it saved me a lot of time.
